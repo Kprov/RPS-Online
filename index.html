@@ -1,1 +1,56 @@
+<!DOCTYPE html>
 
+<html lang="en-us">
+
+<head>
+<meta charset="UTF-8">
+<title>RPS Online</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container jumbotron">
+    <div>
+      <h1 class="text-center">RPS Online</h1>
+    </div>
+  </div>
+  <div class="container col text-center" id="buttons">
+    <button class="button btn-lg btn-primary" id="rock">Rock</button>
+    <button class="button btn-lg btn-primary" id="paper">Paper</button>
+    <button class="button btn-lg btn-primary" id="scissors">Scissors</button>
+  </div>
+  <div class="container row counts" id="scorebox">
+    <h4>Player 1 Score</h4>
+      <div id="1W">Wins: </div>
+      <div id="1L">Losses: </div>
+      <div id="1T">Ties: </div>
+  </div>
+  <div class="container row counts">
+    <h4>Player 2 Score</h4>
+    <div id="2W">Wins: </div>
+    <div id="2L">Losses: </div>
+    <div id="2T">Ties: </div>
+  </div>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBvTZj-UBjhU74ZgC-Pmub7MpX0TkqWQy4",
+    authDomain: "rps-online-a49ba.firebaseapp.com",
+    databaseURL: "https://rps-online-a49ba.firebaseio.com",
+    projectId: "rps-online-a49ba",
+    storageBucket: "rps-online-a49ba.appspot.com",
+    messagingSenderId: "183259678616"
+  };
+  firebase.initializeApp(config);
+  var firebase = firebase.database();
+</script>
+<script type="text/javascript" src="assets/javascript/rps.js"></script>
+    
+</body>
+
+</html>
